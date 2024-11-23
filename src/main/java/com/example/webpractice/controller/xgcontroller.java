@@ -27,5 +27,5 @@ public class xgcontroller {
     @RequestMapping("/3")
     public String simpleParam(String[] arr)
     {System.out.println(Arrays.toString(arr));
-        return "OOKK"; }
+        return "OOKK";}
 }
