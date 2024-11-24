@@ -1,11 +1,10 @@
 package com.example.webpractice.controller;
 import com.example.webpractice.entity.stu;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 
 @RestController
@@ -27,5 +26,13 @@ public class xgcontroller {
     @RequestMapping("/3")
     public String simpleParam(String[] arr)
     {System.out.println(Arrays.toString(arr));
+        return "OOKK";}
+    @RequestMapping("/4")
+    public String simpleParam1(@RequestParam List<String> lis)
+    {System.out.println(lis);
+        return "OOKK";}
+    @RequestMapping("/5")
+    public String json(@RequestBody stu st)
+    {System.out.println(st);
         return "OOKK";}
 }

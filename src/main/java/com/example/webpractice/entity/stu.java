@@ -1,14 +1,11 @@
 package com.example.webpractice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data   //包括set get equal hashcode tostring
-@NoArgsConstructor  //无参构造
-@AllArgsConstructor //全参构造
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class stu {
-    int Sage;
+    @JsonProperty
+   private Integer Sage;
 
     @Override
     public String toString() {
@@ -21,14 +18,13 @@ public class stu {
                 '}';
     }
 
-    public int getSage() {
-        return Sage;
-    }
-
-    public void setSage(int sage) {
+    public void setSage(Integer sage) {
         Sage = sage;
     }
 
+    public int getSage() {
+        return Sage;
+    }
     public String getSno() {
         return Sno;
     }
@@ -61,4 +57,4 @@ public class stu {
         Sdept = sdept;
     }
 
-    String Sno,Sname,Ssex,Sdept;}
+    @JsonProperty private String Sno,Sname,Ssex,Sdept;}
